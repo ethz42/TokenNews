@@ -26,7 +26,8 @@ import dynamic from 'next/dynamic'
 
 
 const ComponentUsingLocalStorage = dynamic(
-  () => import('../components/Component').then(mod => mod.Component),
+  () => import('../components/component').then(mod => mod.Component),
+  { ssr: false }
 )
 
 export default function Home() {
