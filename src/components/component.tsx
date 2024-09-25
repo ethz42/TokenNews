@@ -85,6 +85,7 @@ export function Component() {
         provider: walletProvider ?? undefined
       })
     }
+  
   }, [walletProvider, isChatboxReady])
 
   useEffect(() => {
@@ -99,7 +100,10 @@ export function Component() {
         account: account.address
       })
     }
+  
   }, [isChatboxReady, walletProvider, account.address])
+
+  
 
   const [articles, setArticles] = useState<ArticlePreview[]>([]);
   const [currentToken, setCurrentToken] = useState<string>('degen');
@@ -132,6 +136,7 @@ export function Component() {
         includes: [{ groupId: groupId111 }]
       }
     });
+  
   }, [groupId111]);
 
   return (
